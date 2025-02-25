@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macro Calculator</title>
+  <link rel="stylesheet" href="macro-calculator.css">
+</head>
+<body>
+
+  <header>
+    <div class="page-title">
+      <h1>Macronutrient Calculator</h1>
+    </div>
+  </header>
+
+  <div class="output-section">
+    <div class="output-content">
+    </div>
+    <div class="output-content" id="output-2">
+    </div>
+    <div class="output-content" id="output-3">
+    </div>
+  </div>
+
+  <form class="macro-calculator">
+    <div class="form-row">
+      <label for="age-input">Age:</label>
+      <div>
+        <input id="age-input" type="number" min="18" max="80" placeholder="18" required> <span>ages 18-80</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="gender-input">Gender:</label>
+      <select name="Gender" id="gender-input" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="height-input">Height:</label>
+      <div>
+        <input id="height-input" class="height-ft-input" type="number" placeholder="5" required> <span>feet</span>
+        <input id="height-input" class="height-in-input" type="number" placeholder="9" required> <span>inches</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="weight-input">Weight:</label>
+      <div>
+        <input id="weight-input" type="number" placeholder="165" required> <span>pounds</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="activity-level-input">Activity Level:</label>
+      <select name="activity-level" id="activity-level-input" required>
+        <option value="sedentary">Sedentary: little to no exercise</option>
+        <option value="light">Lightly Active: 1 to 3 days per week</option>
+        <option value="moderate">Moderately Active: 3 to 5 days per week</option>
+        <option value="very">Very Active: 6 to 7 days per week</option>
+        <option value="extremely">Extremely Active: Daily exercise and have physical job, or train 2x per day</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="goals-input">Goal:</label>
+      <select name="goals" id="goals-input" required>
+        <option value="weight-loss">Weight Loss</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="muscle-gain">Muscle Gain</option>
+      </select>
+    </div>
+    <button type="submit" id="calc-btn">Calculate</button>
+  </form>
+
+  <script src="macro-calculator.js"></script>
+</body>
+</html>
